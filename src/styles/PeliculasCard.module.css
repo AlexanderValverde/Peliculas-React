@@ -1,0 +1,18 @@
+
+.peliCard{
+    list-style: none;
+    font-size: 1.5rem;
+    color: wheat;
+    text-align: center;
+}
+
+.peliIMG{
+    border-radius: 2rem;
+}
+
+@media (max-width: 560px) {
+    .peliIMG{
+        width: 90%;
+        height: auto;
+    }
+}
