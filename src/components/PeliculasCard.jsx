@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export function PeliculasCard({pelicula}){
     const imageURL = "https://image.tmdb.org/t/p/w300" + pelicula.poster_path;
+
     return (
         <li className={styles.peliCard}>
             <Link to={"/peliculas/" + pelicula.id}>

@@ -1,23 +1,28 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Loader } from "../components/Loader";
 import styles from "../styles/DetallePelicula.module.css";
 import { httpGET } from "../utils/httpCliente";
 
 export function DetallePelicula() {
   const { peliculaID } = useParams();
+  const [isLoading, setIsLoading] = useState(true);
   const [peliculasData, setPelicula] = useState(null);
 
   useEffect(() => {
-    httpGET("/movie/" + peliculaID).then(data => {
-        setPelicula(data);
+    setIsLoading(true);
+    httpGET("/movie/" + peliculaID).then((data) => {
+      setPelicula(data);
+      setIsLoading(false);
     });
   }, [peliculaID]);
 
-  if (!peliculasData) {
-      return null;
+  if (isLoading) {
+    return <Loader></Loader>;
   }
 
-  const imageURL = "https://image.tmdb.org/t/p/w400" + peliculasData.poster_path;
+  const imageURL =
+    "https://image.tmdb.org/t/p/w400" + peliculasData.poster_path;
 
   return (
     <div className={styles.detalleContainer}>
