@@ -1,15 +1,20 @@
-import { PeliculasGrid } from "./components/PeliculasGrid";
+import {DetallePelicula} from "./pages/DetallePelicula";
+import {LandingPage} from "./pages/LandingPage";
 import styles from "./styles/App.module.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function App() {
   return (
-    <div>
+    <Router>
         <header>
-            <h1 className={styles.peliTitle}>Películas</h1>
+            <Link to="/"><h1 className={styles.peliTitle}>Películas & Series</h1></Link>
         </header>
         <main>
-           <PeliculasGrid></PeliculasGrid>
+          <Switch>
+            <Route exact path="/peliculas/:peliculaID"><DetallePelicula></DetallePelicula></Route>
+            <Route path="/"><LandingPage></LandingPage></Route>
+          </Switch>
         </main>
-    </div>
+    </Router>
   );
 }

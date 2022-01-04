@@ -1,0 +1,25 @@
+
+.detalleContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.peliIMG{
+    border-radius: 1.3rem;
+}
+
+.col{
+    max-width: 400px;
+    height: 80%;
+    height: auto;
+    margin: 15px;
+}
+
+.peliDetalle{
+    font-size: 1.3rem;
+}
+
+.overviewDetalle{
+    text-align: justify;
+}

@@ -6,8 +6,16 @@
     text-align: center;
 }
 
+.peliCard:hover{
+    opacity: 1s;
+}
+
 .peliIMG{
-    border-radius: 2rem;
+    border-radius: 1.2rem;
+}
+
+a{
+    text-decoration: none;
 }
 
 @media (max-width: 560px) {
