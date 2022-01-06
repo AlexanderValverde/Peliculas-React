@@ -43,3 +43,46 @@ export function PeliculasGrid() {
     </ul>
   );
 }
+
+
+/*import { useEffect, useState } from "react";
+import { httpGET } from "../utils/httpCliente";
+import { PeliculasCard } from "./PeliculasCard";
+import { Loader } from "../components/Loader";
+import { useQuery } from "../hooks/useQuery";
+import styles from "../styles/PeliculasGrid.module.css";
+
+export function PeliculasGrid() {
+
+  const [peliculasData, setPelicula] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const query = useQuery();
+  const search = query.get("search");
+
+  useEffect(() => {
+    setIsLoading(true);
+    const searchUrl = search
+      ? "/search/movie?query=" + search
+      : "/discover/movie";
+    httpGET(searchUrl).then((data) => {
+      setPelicula(data.results);
+      setIsLoading(false);
+    });
+  }, [search]);
+
+  if (isLoading) {
+    return <Loader></Loader>;
+  }
+
+  return (
+    <div>
+      <ul className={styles.peliGrid}>
+      {peliculasData.map((pelicula) => (
+        <PeliculasCard key={pelicula.id} pelicula={pelicula} />
+      ))}
+    </ul>
+    </div>
+    
+  );
+}*/

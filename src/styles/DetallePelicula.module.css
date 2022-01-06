@@ -18,8 +18,10 @@
 
 .peliDetalle{
     font-size: 1.3rem;
+    color: white;
 }
 
 .overviewDetalle{
     text-align: justify;
+    color: white;
 }

@@ -16,7 +16,7 @@ export function Busqueda() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        history.push("/?search=" + busquedaTexto);
+        history.push("?search=" + busquedaTexto);
     };
 
     return (
@@ -27,7 +27,7 @@ export function Busqueda() {
                         name="buscar" 
                         placeholder="Type..."
                         value={busquedaTexto} 
-                        onChange={(e) => setbusquedaTexto(e.target.value.toUpperCase())}
+                        onChange={(e) => setbusquedaTexto(e.target.value)}
                         autoComplete="off" />
                 <button className={styles.searchButton} 
                         type="submit"><FaSearch size={20} /></button>

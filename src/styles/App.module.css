@@ -1,10 +1,51 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.encabezado {
+	margin: 27px auto 0;
+	position: relative;
+	width: 600px;
+	height: 50px;
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+.encabezado a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	border-radius: 8px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+.encabezado a:hover{
+	background-color: wheat;
+	color: black;
+}
+
+a:nth-child(1) {
+	width: 200px;
+}
+a:nth-child(2) {
+	width: 200px;
+}
+a:nth-child(3) {
+	width: 200px;
+}
 
 .peliTitle{
+	margin-top: 2rem;
     text-align: center;
     font-size: 3rem;
     color: wheat;
-}
-
-a{
-    text-decoration: none;
 }
